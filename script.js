@@ -1,16 +1,11 @@
-var lastScrollPosition = 0;
+const nav = document.querySelector('nav');
 
-window.addEventListener("scroll", function () {
-  var nav = document.querySelector("nav");
-  var currentScrollPosition = window.scrollY;
-
-  if (currentScrollPosition > lastScrollPosition) {
-    nav.classList.add("scrolled");
-  } else {
-    nav.classList.remove("scrolled");
-  }
-
-  lastScrollPosition = currentScrollPosition;
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
 });
 
 const hamburger = document.querySelector(".hamburger");
